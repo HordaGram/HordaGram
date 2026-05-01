@@ -46,7 +46,7 @@ SERVER_IP=$(curl -s ifconfig.me)
 
 # API-запрос к твоему центральному серверу (Укажешь тут свой домен)
 # Сервер должен ответить JSON'ом: {"status": "ok"} или {"status": "error"}
-RESPONSE=$(curl -s -X POST https://api.tvoy-domen.ru/verify-key \
+RESPONSE=$(curl -s -X POST https://81.90.17.2/verify-key \
     -H "Content-Type: application/json" \
     -d "{\"key\": \"$HORDA_KEY\", \"ip\": \"$SERVER_IP\"}")
 
@@ -67,7 +67,7 @@ sudo apt install python3 python3-pip python3-venv git jq -y > /dev/null 2>&1
 # Клонируем репозиторий (замени на свою ссылку)
 cd /opt
 sudo rm -rf HordaGram-Node
-sudo git clone https://github.com/ТВОЙ_ЮЗЕР/HordaGram-Node.git > /dev/null 2>&1
+sudo git clone https://github.com/HordaGram/HordaGram-Node.git > /dev/null 2>&1
 cd HordaGram-Node
 
 # Создаем виртуальное окружение
