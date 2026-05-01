@@ -46,7 +46,7 @@ SERVER_IP=$(curl -s ifconfig.me)
 
 # API-запрос к твоему центральному серверу (Укажешь тут свой домен)
 # Сервер должен ответить JSON'ом: {"status": "ok"} или {"status": "error"}
-RESPONSE=$(curl -s -X POST https://81.90.17.2/verify-key \
+RESPONSE=$(curl -s -X POST https://127.0.0.1:/verify-key \
     -H "Content-Type: application/json" \
     -d "{\"key\": \"$HORDA_KEY\", \"ip\": \"$SERVER_IP\"}")
 
